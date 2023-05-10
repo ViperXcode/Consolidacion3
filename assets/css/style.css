@@ -1,0 +1,450 @@
+nav{
+    padding-bottom: 5%;
+    margin-bottom: 5px;
+}
+
+
+.BarraNombre{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    background-color:rgb(45, 53, 59);
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+
+}
+
+.fa-solid{
+    margin: 5px;
+
+}
+
+.fa-regular{
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border:0;
+    padding: 13px 20px;
+    /*transform: scale(2.1);*/
+    position:relative;
+    cursor:pointer;
+
+}
+
+.fa-regular .reacciones{
+
+    display:flex;
+    padding:2px 15px;
+    position: absolute;
+    border-radius:3rem;
+    bottom:100%;
+    background-color: #e2f4ff;
+    box-shadow: 0 0 12px rgb(0,0,0,-2);
+    margin-bottom:1rem;
+    opacity:0;
+    visibility: hidden;
+    transform:translate(1rem);
+    transition:all ease-out 250ms;
+}
+
+.fa-regular .reacciones::before{ /* no importtante */
+
+
+}
+
+.fa-regular .nombre-reaccion{
+
+    font-size:0.9rem;
+    color:#000;
+    white-space:nowrap;
+    position:absolute;
+    bottom:calc(100% + .75rem);
+    font-weight:bold;
+    opacity:0;
+    visibility: hidden;
+    transform:translateY(1rem);
+    transition: all ease-in 200ms;
+    
+
+}
+
+.fa-regular .reaccion:hover .nombre-reaccion{
+    
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+
+}
+
+
+.fa-regular:hover .reacciones{
+
+    opacity: 1;
+    visibility: visible;
+
+
+}
+
+
+.reacciones .reaccion{
+
+    display:flex;
+    width:40px;
+    height:40px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #fff;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+
+}
+
+
+.fa-regular .reaccion + .reaccion{
+
+margin-left:0.5rem;
+
+}
+
+.fa-regular .reacciones .reaccion:nth-child(1){
+    background-color: #4b69ff;
+}
+
+.fa-regular .reacciones .reaccion:nth-child(2){
+    background-color: #ff4848;
+}
+
+.fa-regular .reacciones .reaccion:nth-child(3){
+    background-color: #ac40ff;
+}
+.fa-regular .reacciones .reaccion:nth-child(4){
+    background-color: #ffbf36;
+}
+.fa-regular .reacciones .reaccion:nth-child(5){
+    background-color: #ff4848;
+}
+.fa-regular .reacciones .reaccion:nth-child(5){
+    background-color: #ff4848;
+}
+
+
+.fa-solid:hover{
+
+    -webkit-animation-name: wiggle;
+    -ms-animation-name: wiggle;
+    -ms-animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+    transform: scale(1.9);
+
+}
+
+
+@-webkit-keyframes wiggle {
+    0% {-webkit-transform: rotate(10deg);}
+    25% {-webkit-transform: rotate(-10deg);}
+    50% {-webkit-transform: rotate(20deg);}
+    75% {-webkit-transform: rotate(-5deg);}
+    100% {-webkit-transform: rotate(0deg);}
+  }
+  
+  @-ms-keyframes wiggle {
+    0% {-ms-transform: rotate(1deg);}
+    25% {-ms-transform: rotate(-1deg);}
+    50% {-ms-transform: rotate(1.5deg);}
+    75% {-ms-transform: rotate(-5deg);}
+    100% {-ms-transform: rotate(0deg);}
+  }
+  
+  @keyframes wiggle {
+    0% {transform: rotate(10deg);}
+    25% {transform: rotate(-10deg);}
+    50% {transform: rotate(20deg);}
+    75% {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+  }
+
+.Buscador{
+    background-color:rgb(27, 32, 36);
+    padding: 2%;
+    color: aliceblue;
+    
+}
+
+.MandarMensaje{
+    background-color:rgb(27, 32, 36);
+    padding: 1%;
+
+
+}
+
+input{
+
+    width: 100%;
+    box-sizing: border-box;
+    background-color:rgb(27, 32, 36);
+    border-bottom: 1px solid #00c000;
+    border-right: transparent;
+    color: bisque;
+
+
+}
+
+.container.bg-dark-subtle{
+
+    overflow-y: auto;
+    scroll-behavior-y: contain;
+    scroll-snap-type:y mandatory ;
+    height: calc(100vh - 140px); 
+}
+
+.PrimerContainer {
+
+    padding-right: 0%;
+    background-color:rgb(45, 53, 59);
+    padding-left: 0%;
+    
+}
+
+.carousel{
+padding-left: 5%;
+padding-right: 5%;
+}
+
+.SegundoContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+
+}
+.ParivedNombre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:rgb(45, 53, 59);
+}
+
+
+.Conexión{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+.Active{
+    
+    animation-name: degradadoalerta;
+    animation-duration:4s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+
+.botonsito{
+
+    border-radius: 5px;
+}
+
+@keyframes degradadoalerta {
+
+
+    0% {background:rgb(24, 29, 32) ;}
+
+    50% {background:#00c000;}
+
+    100% {background:rgb(24, 29, 32) ;}
+
+
+}
+
+
+.ParivedC{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgb(27, 32, 36);
+    padding: 1.5%;
+    margin-bottom: 0.2%;
+    color: rgb(196, 196, 196);
+}
+
+.ParivedC:hover{
+
+    background-color:rgb(45, 54, 61);
+    transform: scale(1.1);
+}
+
+.ComentarioCaja{
+
+    padding: 2%;
+    flex-grow: 1;
+
+}
+
+.Pbuscado{
+    text-align: center;
+    padding: 10px;
+
+}
+
+.Iconos{
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.ComentarioCaja2{
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+    align-content: flex-end;
+}
+
+
+.NombreMensajesChat{
+    color: rgb(196, 196, 196);
+    margin-bottom: 0%;
+}
+
+.MensajesChat{
+
+    border-radius: 15px;
+    padding: 0%;
+    color: rgb(136, 136, 136);
+    margin-bottom: 0%;
+    
+}
+
+.Mensaje1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+}
+
+
+.ParivedM{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    align-content: flex-end;  
+}
+
+
+.Mensaje2{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;    
+}
+
+.EsperandoInserto{
+
+    display: none;
+
+}
+
+.TonkaM{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    align-content: flex-end;
+}
+
+.PreMensajeP{
+
+    background-color:azure;
+    border-radius: 25px;
+}
+
+.PreMensajeT{
+
+    background-color:rgb(104, 104, 104);
+    border-radius: 25px;
+}
+
+
+.MensajeP{
+
+    padding: 9px;
+    color: rgb(58, 58, 58);
+    margin-bottom: 0%;
+
+}
+
+
+.MensajeT{
+
+    padding: 9px;
+    color: antiquewhite;
+    margin-bottom: 0%;
+
+}
+
+
+
+.hora{
+
+    padding-inline-end: 3%;
+    padding-inline-start: 3%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.check {
+    padding: 10%;
+}
+
+.fecha{
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.Fechahora{
+
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+
+
+}
+
+.imagensize{
+    width: 80px;
+    padding: 0.9%;
+    border: 2.2px solid #00ce0a;
+    
+}
+
+.Viñuela{
+    width: 45px;
+    padding: 0.9%;
+    border: 1.2px solid #ffffff;
+    
+}
+
+img:hover {
+
+    transform: scale(1.1);
+  }
+
+.container2{
+    background-color: rgb(243, 166, 64);
+    height: 50PX;
+}                                            
